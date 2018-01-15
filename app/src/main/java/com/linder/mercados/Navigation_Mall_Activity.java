@@ -24,7 +24,7 @@ public class Navigation_Mall_Activity extends AppCompatActivity  {
                     transaction.replace(R.id.content, new HomeFragment()).commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    transaction.replace(R.id.content, new MapFragment()).commit();
+                    transaction.replace(R.id.content, new PagoFragment()).commit();
                     return true;
                 case R.id.navigation_notifications:
                     transaction.replace(R.id.content, new Pago_Frac_Fragment()).commit();

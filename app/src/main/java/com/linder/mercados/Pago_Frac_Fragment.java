@@ -7,6 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -64,7 +70,27 @@ public class Pago_Frac_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pago_frac, container, false);
+        View view = inflater.inflate(R.layout.fragment_pago_frac, container, false);
+        Spinner spinnerPagoFrac= (Spinner) view.findViewById(R.id.spinnerPagoFrac);
+        // Spinner click listener
+        spinnerPagoFrac.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+            public void onItemSelected(AdapterView<?>
+                                               arg0, View arg1, int arg2, long arg3){
+            }
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+        });
+        // Elements of Spinner
+        List<String> values = new ArrayList<String>();
+        values.add("Minorista");
+        values.add("Ramon Castilla");
+        values.add("3 de Febrero");
+        values.add("Mercado4");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, values);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPagoFrac.setAdapter(dataAdapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -7,18 +7,23 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MapFragment.OnFragmentInteractionListener} interface
+ * {@link PagoFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MapFragment#newInstance} factory method to
+ * Use the {@link PagoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MapFragment extends Fragment {
+public class PagoFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +35,7 @@ public class MapFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public MapFragment() {
+    public PagoFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +45,11 @@ public class MapFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MapFragment.
+     * @return A new instance of fragment PagoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MapFragment newInstance(String param1, String param2) {
-        MapFragment fragment = new MapFragment();
+    public static PagoFragment newInstance(String param1, String param2) {
+        PagoFragment fragment = new PagoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +70,27 @@ public class MapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map, container, false);
+        View view = inflater.inflate(R.layout.fragment_pago, container, false);
+        Spinner spinnerPago= (Spinner) view.findViewById(R.id.spinnerPago);
+        // Spinner click listener
+        spinnerPago.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+            public void onItemSelected(AdapterView<?>
+                                               arg0, View arg1, int arg2, long arg3){
+            }
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+        });
+        // Elements of Spinner
+        List<String> values = new ArrayList<String>();
+        values.add("Minorista");
+        values.add("Ramon Castilla");
+        values.add("3 de Febrero");
+        values.add("Mercado4");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, values);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPago.setAdapter(dataAdapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
