@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.linder.mercados.IngresoActivity">
+
+    <Spinner
+        android:id="@+id/spinnerIngreso"
+        style="@style/Base.Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">'
+    </Spinner>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/date_initial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:layout_margin="12dp"
+            android:hint="Fecha Inicial"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/date_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_margin="12dp"
+            android:editable="false"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Fecha Final"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btnProbandodeuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="50dp"
+        android:text="Buscar"
+        android:background="@drawable/bg_button"
+        android:textSize="17sp"
+        android:textColor="#fff"/>
+
+
+</LinearLayout>

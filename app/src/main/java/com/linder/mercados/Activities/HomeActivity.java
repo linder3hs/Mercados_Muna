@@ -13,8 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Spinner;
 
+import com.linder.mercados.Deudactivity;
+import com.linder.mercados.IngresoActivity;
 import com.linder.mercados.MapsActivity;
-import com.linder.mercados.Navigation_Mall_Activity;
+import com.linder.mercados.PuestoReacudacionActivity;
 import com.linder.mercados.R;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -103,15 +105,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.contrato) {
-            Intent intent = new Intent(this, Navigation_Mall_Activity.class);
+            Intent intent = new Intent(this, PuestoReacudacionActivity.class);
             startActivity(intent);
         } else if (id == R.id.resolucion) {
-
-        } else if (id == R.id.documento) {
+            Intent intent3 = new Intent(this, Deudactivity.class);
+            startActivity(intent3);
 
         } else if (id == R.id.mapa) {
             Intent intent2 = new Intent(this, MapsActivity.class);
             startActivity(intent2);
+        } else if (id == R.id.ingresos) {
+            Intent intent4 = new Intent(this, IngresoActivity.class);
+            startActivity(intent4);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

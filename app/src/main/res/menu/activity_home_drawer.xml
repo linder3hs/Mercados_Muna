@@ -2,30 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <item android:title="Conductores con" >
+    <item android:title="Merced Conductiva" >
         <menu>
             <item
                 android:id="@+id/contrato"
-                android:title="Contrato"
+                android:title="Puesto Reca."
                 android:icon="@drawable/ic_assignment"/>
             <item
                 android:id="@+id/resolucion"
-                android:title="Resolucion"
+                    android:title="Puesto Deuda"
                 android:icon="@drawable/ic_dashboard_black_24dp"/>
         </menu>
     </item>
-    <item
-        android:title="Conductores sin" >
+    <item android:title="Otros ingresos">
         <menu>
             <item
-                android:id="@+id/documento"
-                android:title="Documento"
-                android:icon="@drawable/ic_file"/>
+                android:id="@+id/ingresos"
+                android:title="Ingresos"
+                android:icon="@drawable/ic_monetization"/>
         </menu>
     </item>
-    <item
-        android:id="@+id/mapa"
-        android:title="Mapa"
-        android:icon="@drawable/ic_map">
+    <item android:title="Ubicación de mercados">
+        <menu>
+             <item android:id="@+id/mapa"
+                android:title="Mapa"
+                android:icon="@drawable/ic_map" />
+        </menu>
     </item>
 </menu>

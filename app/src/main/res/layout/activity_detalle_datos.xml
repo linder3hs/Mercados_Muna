@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.linder.mercados.DetalleDatosActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Nombre del Puesto"
+        android:layout_margin="6dp"
+        android:gravity="center"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Codigo de puesto"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mora"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fecha de cancelacion"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="numero de cancelacion"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="documento de indentidad"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cod_nombre"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_margin="12dp"/>
+</LinearLayout>

@@ -47,9 +47,33 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Navigation_Mall_Activity"
-            android:label="Conductores con contrato"
-            android:parentActivityName=".Activities.HomeActivity"></activity>
+            android:name=".DatosActivity"
+            android:label="Detalle de Recaudación de puesto"
+            android:parentActivityName=".PuestoReacudacionActivity" />
+        <activity
+            android:name=".DetalleDatosActivity"
+            android:label="Recaudación"
+            android:parentActivityName=".DatosActivity" />
+        <activity
+            android:name=".Deudactivity"
+            android:label="Puesto Deuda"
+            android:parentActivityName=".Activities.HomeActivity" />
+        <activity
+            android:name=".Detalle_Deuda_Activity"
+            android:label="Detalle de la deuda del puesto"
+            android:parentActivityName=".Deudactivity" />
+        <activity
+            android:name=".IngresoActivity"
+            android:label="Ingreso"
+            android:parentActivityName=".Activities.HomeActivity" />
+        <activity
+            android:name=".DettaleIngresoActivity"
+            android:label="Detalle Ingreso"
+            android:parentActivityName=".IngresoActivity" />
+        <activity android:name=".PuestoReacudacionActivity"
+            android:label="Puesto Recaudación"
+            android:parentActivityName=".Activities.HomeActivity"/>
+        <activity android:name=".DetallePuestoRecaudacionActivity"></activity>
     </application>
 
 </manifest>

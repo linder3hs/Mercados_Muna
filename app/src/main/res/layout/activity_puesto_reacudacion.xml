@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.linder.mercados.HomeFragment">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.linder.mercados.HomeFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,14 +103,7 @@
                 android:background="@drawable/bg_button"
                 android:textSize="17sp"
                 android:textColor="#fff"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Esto es un espacio"
-                android:textSize="40sp"
-                android:textColor="#fff"/>
         </LinearLayout>
 
-</FrameLayout>
+    </FrameLayout>
 </ScrollView>

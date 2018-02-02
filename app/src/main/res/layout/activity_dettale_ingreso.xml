@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+    <LinearLayout
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conductor: Nombre"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Conductor: Tip"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="13dp"
+            android:layout_margin="6dp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+    <TableRow
+        android:background="#3c3d3d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+
+
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp">
+        <TextView
+            android:text="Mes"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+
+        <TextView
+            android:padding="3dip"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:text="Tupa" />
+        <TextView
+            android:text="SSHH"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Parqueo"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+        <TextView
+            android:text="Subtotal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:padding="3dip" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/Totales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TextoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:gravity="right"
+            android:text="Total: "
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/BronceTotal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="200"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/BronceTotal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="#000"
+            android:layout_span="1"
+            android:textStyle="bold"
+            android:text="Total: "
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/BronceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="200"
+            android:textSize="18sp" />
+    </TableRow>
+
+</TableLayout>
