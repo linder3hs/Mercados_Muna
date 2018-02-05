@@ -16,13 +16,12 @@ import retrofit2.http.POST;
 
 public interface ApiService {
 
-    String API_BASE_URL = "";
+    String API_BASE_URL = "http://192.168.13.250/";
 
     @FormUrlEncoded
-    @POST("api/v1/login")
+    @POST("mml/acceso")
     Call<ResponseMessage> loginUsuario(
             @Field("user") String user,
             @Field("password") String password
     );
-
 }
