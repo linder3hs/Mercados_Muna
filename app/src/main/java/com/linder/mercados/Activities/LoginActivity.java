@@ -15,6 +15,9 @@ import com.linder.mercados.ApiService;
 import com.linder.mercados.ApiServiceGenerator;
 import com.linder.mercados.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,10 +41,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final String user = use.getText().toString();
                 final String password = pwd.getText().toString();
-
                 ApiService service = ApiServiceGenerator.createService(ApiService.class);
                 Call<ResponseMessage> call = null;
-                call = service.loginUsuario(user, password);
+                call = service.loginUsuario(user, password, "password");
                 call.enqueue(new Callback<ResponseMessage>() {
                     @Override
                     public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
@@ -52,7 +54,6 @@ public class LoginActivity extends AppCompatActivity {
                                 ResponseMessage responseMessage = response.body();
                                 Log.d(TAG, "responseMessage: " + responseMessage);
                                 Toast.makeText(LoginActivity.this, responseMessage.getMessage(), Toast.LENGTH_LONG).show();
-                                // Save to SharedPreferences
                                 Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                                 startActivity(intent);
                                 finish();
