@@ -1,37 +1,45 @@
 package com.linder.mercados.Activities;
 
 /**
- * Created by ROQUE on 22/10/2017.
+ * Created by Linder .
  */
 
 public class ResponseMessage {
 
-    private String type;
+    private String access_token;
+    private String token_type;
+    private String expires_in;
 
-    private String message;
-
-    public String getMessage() {
-        return message;
+    public String getAccess_token() {
+        return access_token;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setAccess_token(String access_token) {
+        this.access_token = access_token;
     }
 
-    public String getType() {
-        return type;
+    public String getToken_type() {
+        return token_type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setToken_type(String token_type) {
+        this.token_type = token_type;
+    }
+
+    public String getExpires_in() {
+        return expires_in;
+    }
+
+    public void setExpires_in(String expires_in) {
+        this.expires_in = expires_in;
     }
 
     @Override
     public String toString() {
         return "ResponseMessage{" +
-                "type='" + type + '\'' +
-                ", message='" + message + '\'' +
+                "access_token='" + access_token + '\'' +
+                ", token_type='" + token_type + '\'' +
+                ", expires_in='" + expires_in + '\'' +
                 '}';
     }
-
 }

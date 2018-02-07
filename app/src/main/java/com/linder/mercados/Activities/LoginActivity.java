@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (response.isSuccessful()) {
                                 ResponseMessage responseMessage = response.body();
                                 Log.d(TAG, "responseMessage: " + responseMessage);
-                                Toast.makeText(LoginActivity.this, responseMessage.getMessage(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, responseMessage.getAccess_token(), Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                                 startActivity(intent);
                                 finish();
