@@ -2,25 +2,40 @@ package com.linder.mercados.Activities;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.linder.mercados.ApiService;
+import com.linder.mercados.ApiServiceGenerator;
 import com.linder.mercados.Deudactivity;
 import com.linder.mercados.IngresoActivity;
 import com.linder.mercados.MapsActivity;
 import com.linder.mercados.PuestoReacudacionActivity;
 import com.linder.mercados.R;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-        public Spinner spinnerMercado;
+    public Spinner spinnerMercado;
+    public String token;
+    // SharedPreferences
+    private SharedPreferences sharedPreferences;
 
 
     @Override
@@ -28,32 +43,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        initialize();
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String email = sharedPreferences.getString("token", null);
+
+        token = getIntent().getStringExtra("token");
+        Toast.makeText(this, token, Toast.LENGTH_SHORT).show();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-       /* spinnerMercado = (Spinner) findViewById(R.id.spinnerMercado);
-        // Spinner click listener
-        spinnerMercado.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
-            public void onItemSelected(AdapterView<?>
-                                               arg0, View arg1, int arg2, long arg3){
-            }
-            public void onNothingSelected(AdapterView<?> arg0) {
-            }
-        });
-        // Elementos en Spinner
-        List<String> values = new ArrayList<String>();
-        values.add("Mercado1");
-        values.add("Mercado2");
-        values.add("Mercado3");
-        values.add("Mercado4");
-
-
-
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerMercado.setAdapter(dataAdapter);*/
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -64,8 +62,51 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
     }
+
+    private void initialize() {
+
+        ApiService service = ApiServiceGenerator.createService(ApiService.class);
+
+        Call<List<Usuario>> call = service.getUsuario("Bearer "+ token);
+
+        call.enqueue(new Callback<List<Usuario>>() {
+            @Override
+            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                try {
+
+                    int statusCode = response.code();
+                    Log.d("CODE STATUS", "HTTP status code: " + statusCode);
+
+                    if (response.isSuccessful()) {
+
+                        List<Usuario> usuarios = response.body();
+                        Log.d("usuarios", "usuarios: " + usuarios);
+
+
+                    } else {
+                        Log.e("Servidor", "onError: " + response.errorBody().string());
+                        throw new Exception("Error en el servicio");
+                    }
+
+                } catch (Throwable t) {
+                    try {
+                        Log.e("t", "onThrowable: " + t.toString(), t);
+                        Toast.makeText(HomeActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                    } catch (Throwable x) {
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Usuario>> call, Throwable t) {
+                Log.e("OnFallo", "onFailure: " + t.toString());
+                Toast.makeText(HomeActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+
+        });
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -123,9 +164,4 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
-
-
-
 }
